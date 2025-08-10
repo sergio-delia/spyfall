@@ -1,0 +1,29 @@
+mat-dialog-content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+mat-dialog-actions {
+  margin-top: 1.5rem;
+}
+
+button[mat-button] {
+  font-weight: 600;
+  color: #3f51b5;
+  text-transform: uppercase;
+}
+
+button[mat-raised-button][color="primary"] {
+  background-color: #3f51b5;
+  font-weight: 700;
+}
+
+button[mat-raised-button][color="primary"]:hover:not(:disabled) {
+  background-color: #303f9f;
+}

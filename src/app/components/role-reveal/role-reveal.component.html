@@ -1,0 +1,19 @@
+<div class="role-reveal" *ngIf="currentPlayer$ | async as player">
+  <h2>{{ player.name }}</h2>
+
+  <div class="role-info">
+    <ng-container *ngIf="player.isSpy; else notSpy">
+      <h3>Sei la spia!</h3>
+      <p>Cerca di capire quale sia la location senza farti scoprire!</p>
+    </ng-container>
+
+    <ng-template #notSpy>
+      <h3>Non sei la spia</h3>
+      <p>Location: {{ (gameState$ | async)?.currentLocation }}</p>
+    </ng-template>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="hideRole()">
+    Ho capito
+  </button>
+</div>

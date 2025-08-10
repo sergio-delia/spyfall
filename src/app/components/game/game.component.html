@@ -1,0 +1,25 @@
+<div class="game-container" *ngIf="gameState$ | async as state">
+  <div class="header">
+    <h2>Partita in corso</h2>
+    <app-timer></app-timer>
+  </div>
+
+  <div class="players-grid">
+    <div *ngFor="let player of state.players" class="player-card">
+      <h3>{{ player.name }}</h3>
+      <button mat-raised-button color="primary"
+              (click)="showRole(player.id)"
+              *ngIf="state.revealingRoleToPlayer === null">
+        Mostra Ruolo
+      </button>
+    </div>
+  </div>
+
+  <app-role-reveal *ngIf="state.revealingRoleToPlayer !== null"></app-role-reveal>
+
+  <div class="game-actions" *ngIf="!state.gameEnded">
+    <button mat-raised-button color="warn" (click)="openAccusationDialog()">
+      Accusa un giocatore
+    </button>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+.lobby-container {
+  width: 500px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background: #f5f7fa;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #3f51b5;
+  text-shadow: 0 1px 4px rgba(63, 81, 181, 0.3);
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.player-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.player-input:hover {
+  box-shadow: 0 4px 12px rgb(63 81 181 / 0.15);
+}
+
+.player-input mat-form-field {
+  flex: 1;
+}
+
+mat-form-field {
+  --mat-form-field-underline-color: #3f51b5;
+}
+
+mat-form-field.mat-focused .mat-form-field-label {
+  color: #3f51b5 !important;
+  font-weight: 600;
+}
+
+input.mat-input-element {
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+input.mat-input-element:focus {
+  box-shadow: 0 0 6px #3f51b5aa;
+}
+
+button.mat-icon-button {
+  color: #f44336;
+  transition: transform 0.2s ease;
+}
+
+button.mat-icon-button:hover {
+  color: #d32f2f;
+  transform: scale(1.2);
+}
+
+.actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+button.mat-button, button.mat-raised-button {
+  min-width: 160px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 28px;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.mat-button {
+  color: #3f51b5;
+  border: 2px solid #3f51b5;
+}
+
+button.mat-button:hover:not(:disabled) {
+  background-color: #3f51b5;
+  color: white;
+  box-shadow: 0 4px 12px rgb(63 81 181 / 0.3);
+}
+
+button.mat-raised-button {
+  background-color: #3f51b5;
+  color: white;
+  box-shadow: 0 4px 12px rgb(63 81 181 / 0.25);
+}
+
+button.mat-raised-button:hover:not(:disabled) {
+  background-color: #303f9f;
+  box-shadow: 0 6px 16px rgb(48 63 159 / 0.4);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

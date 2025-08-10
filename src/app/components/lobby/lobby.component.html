@@ -1,0 +1,38 @@
+<div class="lobby-container">
+  <h1>Spyfall</h1>
+
+  <form [formGroup]="lobbyForm" (ngSubmit)="startGame()">
+    <div formArrayName="players" class="players-list">
+      <div *ngFor="let player of players.controls; let i = index" class="player-input">
+        <mat-form-field>
+          <mat-label>Giocatore {{i + 1}}</mat-label>
+          <input matInput [formControlName]="i" placeholder="Nome giocatore">
+          <mat-error *ngIf="player.invalid">Nome richiesto</mat-error>
+        </mat-form-field>
+
+        <button mat-icon-button type="button"
+                *ngIf="players.length > MIN_PLAYERS"
+                (click)="removePlayer(i)">
+          <mat-icon>remove_circle</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button mat-button
+      type="button"
+      *ngIf="players.length < MAX_PLAYERS"
+      (click)="addPlayer()">
+Aggiungi Giocatore
+</button>
+
+<button mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!lobbyForm.valid">
+Avvia Partita
+</button>
+
+    </div>
+  </form>
+</div>

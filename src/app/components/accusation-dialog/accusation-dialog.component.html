@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Accusa un giocatore</h2>
+
+<mat-dialog-content>
+  <p>Chi pensi sia la spia?</p>
+  
+  <mat-radio-group [(ngModel)]="selectedPlayer">
+    <mat-radio-button *ngFor="let player of data.players" 
+                     [value]="player.id"
+                     class="player-option">
+      {{ player.name }}
+    </mat-radio-button>
+  </mat-radio-group>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Annulla</button>
+  <button mat-raised-button color="warn" 
+          [disabled]="selectedPlayer === null"
+          (click)="confirm()">
+    Accusa
+  </button>
+</mat-dialog-actions>

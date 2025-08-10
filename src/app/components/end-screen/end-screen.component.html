@@ -1,0 +1,36 @@
+<div class="end-screen" *ngIf="gameState$ | async as state">
+  <h2>Fine Partita!</h2>
+
+  <div class="result" [ngClass]="{'innocents-win': state.winners === 'innocents', 'spies-win': state.winners === 'spies'}">
+    <h3>
+      {{ state.winners === 'innocents' ? 'Vittoria degli Innocenti!' : 'Vittoria della Spia!' }}
+    </h3>
+  </div>
+
+  <div class="game-info">
+
+    <div class="players-list">
+      <h4>Ruoli dei giocatori:</h4>
+      <ul>
+        <li *ngFor="let player of state.players">
+          {{ player.name }} — <strong>{{ player.isSpy ? 'Spia' : 'Innocente' }}</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="playAgainWithSamePlayers()">
+      Gioca ancora
+    </button>
+    <button mat-raised-button color="primary" (click)="playAgain()">
+      Gioca ancora con altri giocatori
+    </button>
+  </div>
+
+  <div class="game-actions" *ngIf="state.winners === 'innocents'">
+    <button mat-raised-button color="primary" (click)="openSpyGuessDialog()">
+      Indovina la location (solo spia)
+    </button>
+  </div>
+</div>

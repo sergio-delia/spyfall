@@ -1,0 +1,78 @@
+.end-screen {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.result {
+  margin: 2rem 0;
+  padding: 1.2rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.result.innocents-win {
+  background-color: #4caf50; /* verde */
+}
+
+.result.spies-win {
+  background-color: #d32f2f; /* rosso */
+}
+
+.game-info {
+  margin: 2rem 0;
+  text-align: left;
+  color: #333;
+}
+
+.players-list {
+  margin-top: 1rem;
+}
+
+.players-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.players-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+  color: #555;
+}
+
+.actions, .game-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+button.mat-raised-button {
+  min-width: 180px;
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 0.6rem 1.6rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.mat-raised-button[color="primary"] {
+  background-color: #3f51b5;
+  color: white;
+  box-shadow: 0 5px 15px rgb(63 81 181 / 0.3);
+}
+
+button.mat-raised-button[color="primary"]:hover:not(:disabled) {
+  background-color: #303f9f;
+  box-shadow: 0 8px 20px rgb(48 63 159 / 0.45);
+}

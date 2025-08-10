@@ -1,0 +1,19 @@
+.timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  padding: 0.4rem 1.2rem;
+  background-color: #e8eaf6; /* un lilla chiaro */
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgb(63 81 181 / 0.15);
+  font-weight: 600;
+  color: #3f51b5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+.timer mat-icon {
+  color: #3f51b5;
+  font-size: 1.5rem;
+}

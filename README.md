@@ -1,27 +1,37 @@
-# Spyfall
+# Spyfall - Gioco digitale in Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+Spyfall è una versione digitale semplice del celebre gioco di società "Spyfall", realizzata con Angular.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Demo online
 
-## Code scaffolding
+Puoi provare la demo del gioco direttamente qui:  
+[https://sergio-delia.github.io/spyfall/](https://sergio-delia.github.io/spyfall/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Caratteristiche principali
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Lobby per aggiungere i giocatori
+- Assegnazione casuale della spia e della location
+- Rivelazione dei ruoli
+- Sistema di accuse con dialogo modale
+- Timer di gioco
+- Schermata finale con risultati
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Come eseguire in locale
 
-## Running end-to-end tests
+### Prerequisiti
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Node.js e npm installati
+- Angular CLI (`npm install -g @angular/cli`)
 
-## Further help
+### Installazione
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+git clone https://github.com/sergio-delia/spyfall.git
+cd spyfall
+npm install
